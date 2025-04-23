@@ -14,3 +14,9 @@ def get_logs():
 response = get_logs()
 print(response.status_code)
 print(response.headers)
+
+def get_users_table():
+    return requests.get(configuration.URL_SERVICE + configuration.USERS_TABLE_PATH)
+
+response = get_users_table()
+print(response.status_code)
